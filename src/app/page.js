@@ -118,6 +118,9 @@ export default function Home() {
 		if (fullKey.length > 0) {
 			setCipher(decrypt(text, fullKey));
 		}
+		if (fullKey.length === 0) {
+			setCipher(text);
+		}
 	}, [fullKey]);
 
 	return (
