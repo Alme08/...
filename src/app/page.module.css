@@ -13,7 +13,7 @@
   min-height: 100svh;
   padding: 80px;
   gap: 64px;
-  font-family: var(--font-geist-sans);
+  font-family: var(--lora-font);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,7 +35,6 @@
 }
 
 .main ol {
-  font-family: var(--font-geist-mono);
   padding-left: 0;
   margin: 0;
   font-size: 14px;
@@ -159,6 +158,50 @@ a.secondary {
     align-items: center;
     justify-content: center;
   }
+}
+
+/** styles **/
+
+.text {
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.formContainer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.formContainer p {
+  margin: auto 0;
+}
+.input { 
+  flex: 1 1 calc(15% - 20px);
+  min-width: 200px; /* Establece un tamaño mínimo */
+    max-width: 200px; /* Evita que el input crezca más allá del contenedor */
+    padding: 10px;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    
+  font-family: var(--lora-font);
+  border-width: 0 0 3px;
+  background-color: var(--background);
+}
+.input:focus{
+  outline: none;
+  border-width: 0 0 4px; 
+}
+.wrong{
+  border-color: rgb(153, 54, 54)
+}
+.right{
+  border-color: rgb(54, 153, 79)
 }
 
 @media (prefers-color-scheme: dark) {
